@@ -1,7 +1,6 @@
 {
-  "name": "dsh-reasoning-slider",
-  "version": "1.0.0",
-  "private": true,
+  "name": "dsh-reasoning-level-slider",
+  "version": "1.0.1",
   "type": "module",
   "description": "Adds a reasoning-effort slider to the composer model menu so one drag switches the current model's reasoning level.",
   "exports": {
@@ -33,11 +32,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/peter9130/dsh-reasoning-slider.git"
+    "url": "https://github.com/peter9130/dsh-reasoning-level-slider.git"
   },
-  "homepage": "https://github.com/peter9130/dsh-reasoning-slider#readme",
+  "homepage": "https://github.com/peter9130/dsh-reasoning-level-slider#readme",
   "bugs": {
-    "url": "https://github.com/peter9130/dsh-reasoning-slider/issues"
+    "url": "https://github.com/peter9130/dsh-reasoning-level-slider/issues"
   },
   "keywords": [
     "dsh",
@@ -47,5 +46,8 @@
     "reasoning",
     "model-menu",
     "web-ui"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -5,4 +5,4 @@
 # entry to ~/.dsh/reasoning-slider.log.
 - insert:
     - id: reasoning-slider
-      name: 'dsh-reasoning-slider'
+      name: 'dsh-reasoning-level-slider'

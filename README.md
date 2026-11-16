@@ -19,41 +19,48 @@
 
 ## 安装 / Installation
 
-这是一个 DeepSeek Harness（DSH）Web 插件 bundle，两种装法都行。
+这是一个 DeepSeek Harness（DSH）Web 插件 bundle，三种装法任选。
 
-### 方式一：下载 Release 安装包（推荐）
+### 方式一：npm 安装（推荐）
 
-1. 打开 [Releases](https://github.com/peter9130/dsh-reasoning-slider/releases/latest)，下载 `dsh-reasoning-slider-1.0.0.tgz`。
-2. 在 DSH 里把 tgz 的绝对路径交给插件管理器安装：
-
-   ```text
-   用 plugin_manager 的 install_bundle，安装 /绝对路径/dsh-reasoning-slider-1.0.0.tgz
-   ```
-
-   或者把 tgz 放进任意目录，在 DSH 里说「安装 /path/to/dsh-reasoning-slider-1.0.0.tgz」，由 Agent 调用 `plugin_manager` 完成。
-
-3. 按提示重启 DSH（或到「设置 → 插件」里对 `dsh-reasoning-slider` 禁用再启用）。
-   浏览器端（`client.js`）由 client-hmr 热加载，约 10 秒生效；宿主端（`index.js` /
-   `cordis.patch.yml`）需要重启或重新启用。
-
-### 方式二：从源码目录安装
-
-```bash
-git clone https://github.com/peter9130/dsh-reasoning-slider.git
-```
-
-然后在 DSH 里用 `plugin_manager install_bundle` 指向克隆下来的目录（或把目录放进
-`~/.dsh/profiles/<profile>/vendor/` 后安装），开发时也可以直接 `link:` 到该目录。
-
-### 方式三：从 GitHub 源码安装
+在 DSH 里直接让插件管理器按包名安装：
 
 ```text
-用 plugin_manager 安装 github:peter9130/dsh-reasoning-slider
+用 plugin_manager 安装 dsh-reasoning-level-slider@1.0.1
 ```
 
-GitHub 源码安装走 pnpm 的 git 拉取，国内网络可能很慢；优先用方式一的 tarball。
+国内网络访问 npm 源通常比 GitHub 快；也可以先 `npm view dsh-reasoning-level-slider version` 确认版本。
+
+### 方式二：下载 Release 安装包（离线）
+
+1. 打开 [Releases](https://github.com/peter9130/dsh-reasoning-level-slider/releases/latest)，下载 `dsh-reasoning-level-slider-1.0.1.tgz`。
+2. 把它交给 DSH 的插件管理器：
+
+   ```text
+   用 plugin_manager 的 install_bundle 安装 /绝对路径/dsh-reasoning-level-slider-1.0.1.tgz
+   ```
+
+### 方式三：从源码目录安装（开发）
+
+```bash
+git clone https://github.com/peter9130/dsh-reasoning-level-slider.git
+```
+
+然后在 DSH 里用 `plugin_manager install_bundle` 指向该目录，或把目录放进
+`~/.dsh/profiles/<profile>/vendor/` 后安装；开发时也可以直接 `link:` 到该目录。
+
+## 升级 / Upgrade
+
+```text
+用 plugin_manager 把 dsh-reasoning-level-slider 升级到最新版本
+```
+
+或重新执行一次安装并指定新版本号（如 `dsh-reasoning-level-slider@1.0.2`）。
 
 ## 卸载 / Uninstall
 
 在「设置 → 插件」里禁用并删除该 bundle，或从 profile 的 `package.json`
-（`dependencies` 与 `dsh.profile.bundles`）里去掉 `dsh-reasoning-slider` 后重新安装依赖。
+（`dependencies` 与 `dsh.profile.bundles`）里去掉 `dsh-reasoning-level-slider` 后重新安装依赖。
+
+宿主端（`index.js` / `cordis.patch.yml`）改动需要重启或禁用再启用；浏览器端
+（`client.js`）由 client-hmr 热加载，约 10 秒生效。
