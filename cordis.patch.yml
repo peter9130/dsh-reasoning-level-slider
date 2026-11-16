@@ -1,0 +1,8 @@
+# Reasoning slider bundle patch.
+#
+# One Host row carries the bundle's browser half (the composer model menu's
+# effort slider) and the small diagnostic sink that records a crashed slot
+# entry to ~/.dsh/reasoning-slider.log.
+- insert:
+    - id: reasoning-slider
+      name: 'dsh-reasoning-slider'

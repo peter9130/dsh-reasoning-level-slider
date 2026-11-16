@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Reasoning level slider",
+    "description": "Adds a reasoning-level slider to the composer model menu: drag it, or use the arrow keys, to switch the current model's reasoning effort (Off / Low / High / Max, taken from the Host model catalog). A drag submits once, on release. The menu's existing model row, reasoning row, and search stay unchanged."
+  }
+}
