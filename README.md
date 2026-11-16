@@ -19,6 +19,8 @@
 
 ## 安装 / Installation
 
+> npm 首发正在等待 registry 的安全冷却期结束；若 `npm view dsh-reasoning-level-slider` 还查不到，请直接用下面的 Release 安装包。
+
 这是一个 DeepSeek Harness（DSH）Web 插件 bundle，三种装法任选。
 
 ### 方式一：npm 安装（推荐）
