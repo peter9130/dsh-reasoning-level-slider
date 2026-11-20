@@ -25,7 +25,7 @@
  * of importing Harness Client packages.
  */
 window.__ModuleLoader__.load({
-  id: '@local/dsh-reasoning-slider',
+  id: 'dsh-reasoning-level-slider',
   factory(require) {
     const React = require('react')
     const h = React.createElement
